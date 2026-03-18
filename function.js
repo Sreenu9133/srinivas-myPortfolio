@@ -174,3 +174,62 @@ if (aboutSection) {
 
 
 
+
+
+// project section  animation
+const GITHUB_USERNAME = "Sreenu9133"; // <-- Apna original username dalo
+
+async function loadRepos() {
+    const repoList = document.getElementById('repo-list');
+    const repoCount = document.getElementById('repo-count');
+
+    try {
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated`);
+        const repos = await response.json();
+
+        repoCount.innerText = repos.length;
+        repoList.innerHTML = ""; // Loading text hatao
+
+        repos.forEach(repo => {
+            const repoHTML = `
+                <div class="repo-item">
+                    <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+                    <p style="color: #bbb; font-size: 14px; margin: 5px 0;">${repo.description || "No description available"}</p>
+                    <div class="repo-details">
+                        <span><i class="bi bi-circle-fill" style="color: #f2ff5b; font-size: 10px;"></i> ${repo.language || "Code"}</span>
+                        <span>⭐ ${repo.stargazers_count}</span>
+                        <span>🍴 ${repo.forks_count}</span>
+                    </div>
+                </div>
+            `;
+            repoList.innerHTML += repoHTML;
+        });
+    } catch (error) {
+        repoList.innerHTML = "<p style='padding:20px; color:red;'>Failed to load repositories. Check your username.</p>";
+    }
+}
+
+loadRepos();
+
+
+
+//contact section animation
+const observerOptions = {
+    threshold: 0.2 // Jab 20% section dikhne lage tab animation start ho
+};
+
+const contactObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Section screen par aate hi 'reveal' class add kar do
+            entry.target.classList.add('reveal');
+        } else {
+            // Agar wapas scroll up karo toh animation reset karna hai toh ye line rakho:
+            entry.target.classList.remove('reveal');
+        }
+    });
+}, observerOptions);
+
+// Contact section ko observe karna shuru karo
+const contactSection = document.querySelector('.contact-section');
+contactObserver.observe(contactSection);

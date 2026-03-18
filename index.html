@@ -24,16 +24,19 @@
             <img src="./images/sr-logo.png" alt="">
         </div>
         <div class="nav-section2">
-            <p>HOME</p>
-            <p>ABOUT</p>
-            <p>SKILLS</p>
-            <p>WORK</p>
-            <p>PROJECTS</p>
-            <p>CONTACT</p>
+            <a href="#home"><p>HOME</p></a>
+            <a href="#about"><p>ABOUT</p></a>
+            <a href="#skills"><p>SKILLS</p></a>
+            <a href="#work"><p>WORK</p></a>
+            <a href="#projects"><p>PROJECTS</p></a>
+            <a href="#contact"><p>CONTACT</p></a>
+        </div>
+        <div class="nav-bar-menu">
+            <i class="bi bi-list"></i>
         </div>
     </nav>
 
-    <div class="hero-section">
+    <div class="hero-section" id="home">
         <div class="hero-section1">
             <div class="hero-section1-text">
                 <h1 class="name-text">SRINIVAS RAO</h1>
@@ -71,7 +74,7 @@
     </div>
 
     <!-- ABOUT SECTION -->
-    <div class="about-section">
+    <div class="about-section" id="about">
         <div class="about-left">
             <h1 class="about-text">ABOUT &lbrace;</h1>
             <h3 class="about-name-text">Hi, I'm <i>Srinivas Rao</i></h3>
@@ -81,7 +84,7 @@
             <!-- <div class="about-image-container"> -->
             <img src="./images/laptop-coding-tarnsparent.png" alt="" class="about-image">
             <!-- </div> -->
-            <h1 class="about-text">&rbrace;</h1>
+            <h1 class="about-text rbrace">&rbrace;</h1>
         </div>
         <div class="about-right">
             <p class="user-profile-text">>_ user_profile.log</p>
@@ -131,11 +134,14 @@
             </div>
 
         </div>
+
+        <h1 class="about-text rbrace1" style="text-align: left;">&rbrace;</h1>
+
     </div>
 
     <!-- SKILLS SECTION -->
-    <div class="skills-section">
-        <h1 class="skills-text">Tools and Technologies &lbrace;</h1>
+    <div class="skills-section" id="skills">
+        <h1 class="skills-text">Skills &lbrace;</h1>
 
 
         <div class="skills-part1">
@@ -192,7 +198,150 @@
             </span>
         </div>
 
+        <h1 class="skills-text">&rbrace;</h1>
     </div>
+
+    <!-- WORK EXPERIENCE SECTION -->
+    <div class="work-section" id="work">
+        <h1 class="work-text">WORK &lbrace;</h1>
+        <p class="work-desc-text">I build modern web applications using clean code and scalable architecture.</p>
+        <p class="work-desc-text">From learning fundamentals to building real-world applications, each step in my
+            journey reflects growth, consistency, and a passion for development.</p>
+
+        <div class="timeline-container">
+            <p class="year-text">2022</p>
+            <div class="timeline-line"></div>
+            <div class="dot"><i class="bi bi-dot"></i>
+                <h1 class="job-text">Android Developer</h1>
+            </div>
+            <div class="dot dot1"><i class="bi bi-dot"></i>
+                <h1 class="job-text">Mern Stack Developer</h1>
+            </div>
+            <div class="dot dot3"><i class="bi bi-dot"></i>
+                <h1 class="job-text">Freelancer Work</h1>
+            </div>
+            <p class="year-text">2024</p>
+        </div>
+        <h1 class="work-text">&rbrace;</h1>
+    </div>
+
+
+    <!-- PROJECTS SECTION -->
+    <div class="projects-section" id="projects">
+        <h1 class="skills-text">PROJECTS &lbrace;</h1>
+
+        <div class="repo-part">
+
+            <span class="repo-list-section">
+                <span class="repo-heading"><i class="bi bi-git"></i> &nbsp; Repositories</span>
+                <span id="repo-count" class="repo-count">0</span>
+            </span>
+
+            <div id="repo-list" class="repo-list">
+                <p class="repo-name">Loading repositories</p>
+            </div>
+
+        </div>
+
+        <h1 class="skills-text">&rbrace;</h1>
+    </div>
+
+
+    <!-- CONTACT SECTION -->
+    <div class="contact-section" id="contact">
+        <div class="contact-left-part">
+            <h1 class="skills-text contact">Contact &lbrace;</h1>
+            <h3 class="have-project-text">Have a project in mind?</h3>
+            <p class="inbox-text">My inbox is always open for new opportunities.</p>
+
+            <div class="contact-links">
+                <a href=""><span class="contact-links-text"><i class="bi bi-github"></i> Sreenu9133</span></a>
+                <a href=""><span class="contact-links-text"><i class="bi bi-envelope-arrow-up-fill"></i>
+                        kumarsrinivas945@gmail.com</span></a>
+                <a href=""><span class="contact-links-text"><i class="bi bi-linkedin"></i> Srinivas Rao</span></a>
+            </div>
+
+            <h1 class="skills-text brace3">&rbrace;</h1>
+        </div>
+        <div class="contact-right-part">
+            <div class="form-section">
+                <form>
+                    <span class="form-fields email">
+                        <label for="">Email</label>
+                        <input type="email">
+                    </span>
+
+                    <span class="form-fields subject">
+                        <label for="">Subject</label>
+                        <input type="text">
+                    </span>
+
+                    <span class="form-fields message">
+                        <label for="">Message</label>
+                        <input type="text">
+                    </span>
+
+                    <button type="submit" class="btn-design1">Submit</button>
+                </form>
+            </div>
+        </div>
+        <h1 class="skills-text brace4">&rbrace;</h1>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-part1">
+
+            <div class="footer-section1">
+                <img src="./images/sr-logo.png" alt="" class="footer-logo">
+                <p class="column1-desc">Professional Full Stack Developer dedicated to crafting immersive,
+                    high-performance digital experiences with cutting-edge technology.</p>
+            </div>
+
+            <div class="footer-section2">
+                <a href=""><h3>NAVIGATION</h3></a>
+                <a href="#home"><p>Home</p></a>
+                <a href="#about"><p>About</p></a>
+                <a href="#skills"><p>Skills</p></a>
+                <a href="#work"><p>Work</p></a>
+                <a href="#projects"><p>Projects</p></a>
+                <a href="#contact"><p>Contact</p></a>
+            </div>
+
+            <div class="footer-section3">
+                <h3>CONNECT</h3>
+                <p>
+                    <a href="mailto:kumarsrinivas945@gmail.com">kumarsrinivas945@gmail.com</a>
+                </p>
+                <p><a href="tel:+919133753252">+91 9133753252</a></p>
+                <span class="footer-icons">
+                    <p>
+                        <a href="https://github.com/Sreenu9133" target="_blank"><i class="bi bi-github"></i></a>
+                    </p>
+                    <p> 
+                        <a href="https://www.linkedin.com/in/srinivas-rao-945s" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    </p>
+                    <p>
+                        <a href="https://wa.me/919133753252" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    </p>
+                    <p>
+                        <a href="https://www.instagram.com/__mr__sreenu__" target="_blank"><i class="bi bi-instagram"></i></a>
+                    </p>
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="footer-part2">
+            <p>© 2026 Srinivas Rao. All rights reserved.</p>
+            <p>Made with ❤️ in India</p>
+        </div>
+
+    </footer>
+
+
 
 
     <script src="./function.js"></script>
