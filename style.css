@@ -1067,7 +1067,8 @@ footer a:hover, footer p:hover {
     }
 
     .skill-card{
-        width: 25%;
+        width: 40%;
+        padding: 20px;
     }
 
     .work-section{
