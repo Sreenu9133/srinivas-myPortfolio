@@ -56,6 +56,56 @@ hoverTargets.forEach(target => {
 animate();
 
 
+// navbar, menu bar functionality(opening/closing)
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".nav-bar-menu");
+    const menuIcon = document.querySelector(".nav-bar-menu i");
+    const navSection2 = document.querySelector(".nav-section2");
+    const navContainer = document.querySelector("nav");
+
+    const closeMenu = () => {
+        if (navSection2.classList.contains("active")) {
+            navSection2.classList.remove("active");
+            menuIcon.classList.remove("bi-x");
+            menuIcon.classList.add("bi-list");
+        }
+    };
+
+    // Toggle Menu on Click
+    menuToggle.addEventListener("click", (event) => {
+        event.stopPropagation(); 
+        
+        navSection2.classList.toggle("active");
+
+        if (navSection2.classList.contains("active")) {
+            menuIcon.classList.remove("bi-list");
+            menuIcon.classList.add("bi-x");
+        } else {
+            menuIcon.classList.remove("bi-x");
+            menuIcon.classList.add("bi-list");
+        }
+    });
+
+    // 1. FIX: close navbar on clicking outside navbar
+    document.addEventListener("click", (event) => {
+        if (!navContainer.contains(event.target)) {
+            closeMenu();
+        }
+    });
+
+    // 2. FIX: close navbar on scrolling outside
+    window.addEventListener("scroll", () => {
+        closeMenu();
+    }, { passive: true }); 
+
+    // 3. close menu bar on clicking links
+    const navLinks = document.querySelectorAll(".nav-section2 a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            closeMenu();
+        });
+    });
+});
 
 
 
@@ -119,7 +169,6 @@ const heroImage = document.querySelector('.hero-section2 img');
 const heroSection = document.querySelector('.hero-section');
 
 heroSection.addEventListener('mousemove', (e) => {
-    // Mouse ki position section ke andar nikaalo
     const { clientX, clientY } = e;
     const { innerWidth, innerHeight } = window;
 
@@ -153,19 +202,15 @@ heroSection.addEventListener('mouseleave', () => {
 const revealOnScroll = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            // Jab section screen mein aaye (scroll down)
             entry.target.classList.add('active');
         } else {
-            // Jab section screen se bahar jaye (scroll up)
-            // Isse animation reset ho jayega aur dubara aane pe phir se play hoga
             entry.target.classList.remove('active');
         }
     });
 }, {
-    threshold: 0.15 // 15% section dikhte hi shuru ho jayega
+    threshold: 0.15 
 });
 
-// About section ko observe karo
 const aboutSection = document.querySelector('.about-section');
 if (aboutSection) {
     revealOnScroll.observe(aboutSection);
@@ -176,8 +221,8 @@ if (aboutSection) {
 
 
 
-// project section  animation
-const GITHUB_USERNAME = "Sreenu9133"; // <-- Apna original username dalo
+// project section, and animation
+const GITHUB_USERNAME = "Sreenu9133"; 
 
 async function loadRepos() {
     const repoList = document.getElementById('repo-list');
@@ -188,7 +233,7 @@ async function loadRepos() {
         const repos = await response.json();
 
         repoCount.innerText = repos.length;
-        repoList.innerHTML = ""; // Loading text hatao
+        repoList.innerHTML = "";
 
         repos.forEach(repo => {
             const repoHTML = `
@@ -215,21 +260,18 @@ loadRepos();
 
 //contact section animation
 const observerOptions = {
-    threshold: 0.2 // Jab 20% section dikhne lage tab animation start ho
+    threshold: 0.2 
 };
 
 const contactObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            // Section screen par aate hi 'reveal' class add kar do
             entry.target.classList.add('reveal');
         } else {
-            // Agar wapas scroll up karo toh animation reset karna hai toh ye line rakho:
             entry.target.classList.remove('reveal');
         }
     });
 }, observerOptions);
 
-// Contact section ko observe karna shuru karo
 const contactSection = document.querySelector('.contact-section');
 contactObserver.observe(contactSection);

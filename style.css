@@ -36,7 +36,7 @@
 
 html, body {
     cursor: none;
-    overflow-x: hidden; /* Ye side wali white space ko block kar dega */
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -53,12 +53,12 @@ html, body {
 
 .trail-dot.is-white {
     background-color: rgba(255, 0, 0, 0.5) !important; 
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.5); /* glow effect */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.5); 
 }
 
 .trail-dot.cursor-hover {
     background-color: white !important;
-    width: 12px; /* on hover dot size will increase */
+    width: 12px;
     height: 12px;
 }
 
@@ -66,8 +66,9 @@ nav{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    padding-right: 40px;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px); 
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
@@ -77,14 +78,11 @@ nav{
 }
 
 .nav-section1{
-    width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 10%;
 }
 
 .nav-section1 img{
-    width: 50%;
+    width: 80%;
     background-color: #0c0c0c;
     background-color: transparent;
     animation: shakeLogo 2s infinite ease-in-out; 
@@ -92,7 +90,7 @@ nav{
 
 .nav-section2{
     display: flex;
-    width: 40%;
+    width: 50%;
     align-items: center;
     justify-content: space-between;
 }
@@ -103,14 +101,19 @@ nav{
 
 .nav-section2 a p{
     color: #89ff69;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .nav-section2 p:hover{
     color: #f2ff5b;
     border: 1px solid #f2ff5b;
     padding: 10px;
+}
+
+.nav-bar-menu{
+    display: none;
 }
 
 @keyframes shakeLogo {
@@ -133,6 +136,9 @@ nav{
     font-weight: 600;
 }
 
+
+/* Hero Section */
+
 .hero-section, .about-section, .skills-section, .contact-section, .projects-section, .work-section {
     position: relative; 
     z-index: 1;
@@ -144,22 +150,22 @@ nav{
     align-items: center;
     justify-content: space-evenly;
     color: white;
-    padding: 100px 0;
+    padding-bottom: 100px;
 }
 
 .hero-section1{
     width: 50%;
-    margin-top: 170px;
+    margin-top: 100px;
 }
 
 .hero-section1-text{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .name-text{
-    font-size: 90px;
+    font-size: 75px;
     letter-spacing: 1.5px;
     font-family: monospace;
     font-weight: 800;
@@ -172,7 +178,7 @@ nav{
     display: inline-block;
     position: relative;
     opacity: 1;
-    animation: letterFall 2s ease-out forwards infinite;
+    /* animation: letterFall 5s ease-out forwards infinite; */
 }
 
 @keyframes letterFall {
@@ -201,7 +207,7 @@ nav{
 }
 
 .summary-text{
-    font-size: 24px;
+    font-size: 20px;
     letter-spacing: 1.5px;
     line-height: 30px;
     font-weight: 600;
@@ -238,11 +244,11 @@ nav{
     align-items: center;
     justify-content: center;
     gap: 15px;
-    width: 25%;
+    width: 50%;
     padding: 15px 20px;
     font-size: 22px;
     font-weight: 600;
-
+    text-decoration: none;
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease; 
@@ -258,8 +264,8 @@ nav{
 .contact-btn:hover {
     background-color: transparent;
     color: #f2ff5b;
-    box-shadow: 0 0 20px rgba(242, 255, 91, 0.6); /* Neon Glow */
-    transform: scale(1.05); /* Thoda bada hoga */
+    box-shadow: 0 0 20px rgba(242, 255, 91, 0.6); 
+    transform: scale(1.05); 
 }
 
 .resume-btn{
@@ -307,7 +313,7 @@ nav{
 
 .hero-section2 img{
     border-radius: 20px;
-    height: 50vh;
+    height: 70vh;
     transition: transform 0.2s ease-out;
     pointer-events: none;
 }
@@ -322,6 +328,7 @@ nav{
     align-items: center;
     justify-content: space-evenly;
     margin-top: 100px;
+    min-height: 180vh;
 }
 
 .about-left{
@@ -329,9 +336,9 @@ nav{
     display: flex;
     flex-direction: column;
     color: white;
-
+    margin-top: -150px;
     opacity: 0;
-    transform: translateX(-150px); /* 150px peeche */
+    transform: translateX(-150px); 
     transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -344,7 +351,7 @@ nav{
 }
 
 .about-name-text{
-    font-size: 35px;
+    font-size: 25px;
     letter-spacing: 2px;
     font-weight: 500;
     color: #89ff69;
@@ -354,9 +361,9 @@ nav{
 
 .about-heading{
     width: 80%;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     letter-spacing: 1.5px;
     line-height: 30px;
     padding-left: 60px;
@@ -386,6 +393,7 @@ nav{
 
 
 
+
 .about-right{
     width: 35%;
     display: flex;
@@ -393,7 +401,7 @@ nav{
     color: white;
     border: 5px solid #f2ff5b;
     opacity: 0;
-    transform: translateX(150px); /* 150px aage */
+    transform: translateX(150px); 
     transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -419,7 +427,7 @@ nav{
 
 .about-summary{
     padding: 30px;
-    font-size: 24px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 1.5px;
     line-height: 30px;
@@ -449,8 +457,13 @@ nav{
     display: flex;
     flex-direction: column;
     border: 1px solid #89ff69;
-    padding: 15px;
+    padding: 10px 8px;
     gap: 10px;
+    text-decoration: none;
+}
+
+.about-card p{
+    font-size: 12px;
 }
 
 .experience{
@@ -479,7 +492,7 @@ nav{
     font-family: monospace;
     letter-spacing: 2px;
     color: #f2ff5b;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     font-weight: 600;
 }
 
@@ -488,11 +501,6 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 20px 0;
-}
-
-.skills-part2{
-    margin-bottom: 50px;
 }
 
 .skill-card{
@@ -502,8 +510,8 @@ nav{
     justify-content: center;
     gap: 10px;
     padding: 15px;
-    width: 12%;
-    /* flex-shrink: 0; */
+    width: 14%;
+    flex-wrap: wrap;
     background: rgba(255, 255, 255, 0.03); 
     border: 1px solid #89ff69;
     border-radius: 15px;
@@ -528,7 +536,7 @@ nav{
 
 .skill-name{
     color: #f2ff5b;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -551,7 +559,7 @@ nav{
 .work-section{
     display: flex;
     flex-direction: column;
-    padding: 0 80px;
+    padding: 100px 80px;
 }
 
 .work-text{
@@ -564,7 +572,6 @@ nav{
 }
 
 .work-desc-text{
-    /* width: 100%; */
     font-size: 24px;
     font-weight: 600;
     color: white;
@@ -584,7 +591,6 @@ nav{
     align-items:center;
     justify-content: space-between;
     position: relative;
-    /* padding-left: 60px; */
 }
 
 .year-text{
@@ -596,7 +602,7 @@ nav{
     position: absolute;
     top: 68px;
     left: 207px;
-    width: 75%;
+    width: 63%;
     height: 4px;
     background: #f2ff5b;
     border-radius: 5px;
@@ -610,7 +616,7 @@ nav{
 .dot{
     position: absolute;
     top: 5px;
-    left: 370px;
+    left: 300px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -627,7 +633,7 @@ nav{
 .job-text{
     text-align: center;
     position: absolute;
-    font-size: 24px;
+    font-size: 18px;
     top: 130px;
     color: #f2ff5b;
 }
@@ -636,8 +642,7 @@ nav{
     color: #89ff69;
 }
 .dot1{
-   left: 740px;
-   /* top: 25px; */
+   left: 600px;
 }
 
 .dot3{
@@ -653,10 +658,10 @@ nav{
 }
 
 .repo-part{
-    width: 70%;
+    width: 90%;
     border: 5px solid #f2ff5b;
     border-radius: 12px;
-    height: 60vh;
+    height: 80vh;
     background: rgba(255, 255, 255, 0.03);
     overflow: hidden; 
     display: flex;
@@ -727,12 +732,12 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 80px;
+    padding: 100px 80px;
 }
 
 .contact{
+    margin: 0;
     margin-bottom: 80px;
-    
 }
 
 .contact-left-part{
@@ -745,15 +750,14 @@ nav{
 }
 
 .have-project-text{
-    font-size: 34px;
+    font-size: 30px;
     color: #89ff69;
     font-weight: 600;
     letter-spacing: 1.5px;
     line-height: 24px;
     margin-bottom: 30px;
-    /* padding-top: 10px; */
     padding-left: 60px;
-    
+    margin-top: 30px;
 }
 
 .inbox-text{
@@ -862,12 +866,10 @@ form{
 footer{
     width: 100%;
     display: flex;
-    /* align-items: center; */
     flex-direction: column;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px); 
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
-    /* padding: 50px 0; */
     padding: 60px 80px;
 }   
 
@@ -957,16 +959,57 @@ footer a:hover, footer p:hover {
 
     .nav-section1{
         width: 100%;
+        /* width: 25%; */
         justify-content: start;
         align-items: start;
     }
 
     .nav-section1 img{
-        width: 10%;
+        width: 100%;
         padding: 0;
     }
     .nav-section2{
-        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95); 
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 20px 0;
+
+        transform: translateY(-101%); 
+        z-index: -1;
+        opacity: 0;
+        transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .nav-section2.active {
+        box-shadow: 0 20px 30px rgba(0,0,0,0.7);
+        transform: translateY(-25%); 
+        opacity: 1;
+        padding-top: 100px;
+    }
+
+    .nav-section2 a {
+        width: 100%;
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    .nav-section2 a p {
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .nav-section2 p:hover {
+        border: none;
+        border-left: 4px solid #f2ff5b;
+        border-right: 4px solid #f2ff5b;
+        padding: 15px 0;
     }
 
     .nav-bar-menu{
@@ -1131,6 +1174,8 @@ footer a:hover, footer p:hover {
         margin-bottom: 50px;
     }
 
+
+    /* Contact section */
     .contact-section{
         flex-direction: column;
         padding-left: 35px;
@@ -1138,6 +1183,11 @@ footer a:hover, footer p:hover {
 
     .contact-left-part{
         width: 100%;
+    }
+
+    .contact-left-part h3
+    {
+        font-size: 100px;
     }
 
     .contact-right-part{
@@ -1161,11 +1211,6 @@ footer a:hover, footer p:hover {
     .form-section{
         width: 80%;
         margin-left: 70px;
-    }
-
-    .have-project-text{
-        margin-top: 30px;
-        margin-left: 50px;
     }
 
     .inbox-text{
@@ -1197,10 +1242,262 @@ footer a:hover, footer p:hover {
         flex-direction: column;
     }
 
+}
 
 
 
+@media (max-width: 576px) {
+   .hero-section{
+    padding-left: 20px;
+    padding-right: 20px;
+   }
 
+    #trail-container, .trail-dot{
+        display: none;
+    }
+    
+    .nav-section1 img{
+        width: 24%;
+    }
 
+    .hero-section{
+        margin-top: 50px;
+    }
 
+    .hero-section2 img{
+        width: 200%;
+        height: 30vh;
+    }
+
+    .hero-section1-text{
+        width: 100%;
+        gap: 10px;
+    }
+
+    .name-text{
+        font-size: 44px;
+    }
+
+    .role-text{
+        font-size: 20px;
+        line-height: 40px;
+        max-height: 30px;
+    }
+
+    .summary-text{
+        font-size: 14px;
+        text-align: start;
+        width: 100%;
+    }
+
+    .contact-icons{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .hero-section1-btns{
+        width: 100%;
+    }
+
+    .hero-section1-btns a{
+        width: 100%;
+    }
+
+    .about-section {
+        padding-top: 30px;
+        
+    }
+
+    .about-left{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .about-text, .skills-text, .work-text{
+        font-size: 40px;
+    }
+
+    .about-name-text{
+        padding: 0;
+    }
+
+    .about-heading{
+        width: 100%;
+        padding: 0;
+    }
+
+    .about-image{
+        width: 100%;
+        height: auto;
+        animation: shakeLogo 3s infinite ease-in-out; 
+    }
+
+    .about-right{
+        width: 90%;
+    }
+
+    .about-status{
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .about-card{
+        width: 90%;
+    }
+
+    .skills-section{
+        padding: 100px 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skills-part1, .skills-part2{
+        padding: 0;
+        gap: 25px;
+    }
+
+    .skill-icon{
+        width: 40%;
+    }
+
+    .skill-name{
+        font-size: 14px;
+    }
+
+    .work-section{
+        padding: 100px 20px;
+        margin: 0;
+    }
+
+    .work-desc-text{
+        width: 100%;
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .timeline-container{
+        padding: 20px;
+    }
+
+    .timeline-line{
+        left: 50px;
+        top: 42px;
+    }
+
+    .year-text{
+        left: 10px;
+    }
+
+    .job-text{
+        font-size: 20px;
+    }
+
+    .projects-section{
+        padding: 0px 20px;
+    }
+
+    .repo-part{
+        width: 100%;
+        margin: 0;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .repo-list-section{
+        width: 100%;
+    }
+
+    .contact-section{
+        flex-direction: column;
+        padding: 50px 20px !important;
+        align-items: start !important;
+        align-self: flex-start !important;
+    }
+
+    .contact-left-part, .contact-right-part{
+        width: 100%;
+        padding: 0;
+    }
+
+    .contact{
+        margin: 0;
+    }
+
+    .have-project-text{
+        padding: 0;
+        font-size: 25px !important;
+    }
+
+    .inbox-text{
+        padding: 0;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .contact-links{
+        margin: 30px 0;
+        padding: 0;
+        gap: 15px;
+    }
+
+    .contact-links-text{
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .contact-links-text i{
+        font-size: 25px;
+    }
+
+    .form-section{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .form-section form label{
+        font-size: 20px !important;
+    }
+
+    footer{
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    .footer-part1{
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;margin: 0;
+    }
+
+    .footer-section1{
+        width: 100%;
+        text-align: start;
+        width: 100%;
+    }
+
+    .footer-logo{
+        margin-bottom: 20px;
+    }
+    .column1-desc{
+        width: 100%;
+    }
+
+    .footer-part2{
+        width: 100%;
+        gap: 20px;
+    }
+
+    .footer-part2 p{
+        width: 100%;
+        text-align: center;
+    }
+
+    
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <title>My Portfolio</title>
+    <title>My Portfolio</title>\
 </head>
 
 <body>
@@ -24,12 +24,24 @@
             <img src="./images/sr-logo.png" alt="">
         </div>
         <div class="nav-section2">
-            <a href="#home"><p>HOME</p></a>
-            <a href="#about"><p>ABOUT</p></a>
-            <a href="#skills"><p>SKILLS</p></a>
-            <a href="#work"><p>WORK</p></a>
-            <a href="#projects"><p>PROJECTS</p></a>
-            <a href="#contact"><p>CONTACT</p></a>
+            <a href="#home">
+                <p>HOME</p>
+            </a>
+            <a href="#about">
+                <p>ABOUT</p>
+            </a>
+            <a href="#skills">
+                <p>SKILLS</p>
+            </a>
+            <a href="#work">
+                <p>WORK</p>
+            </a>
+            <a href="#projects">
+                <p>PROJECTS</p>
+            </a>
+            <a href="#contact">
+                <p>CONTACT</p>
+            </a>
         </div>
         <div class="nav-bar-menu">
             <i class="bi bi-list"></i>
@@ -51,25 +63,28 @@
                     <a href="https://github.com/Sreenu9133" target="_blank">
                         <i class="bi bi-github"></i>
                     </a>
-                    <a href="https://wa.me/919133753252" target="_blank">
-                        <i class="bi bi-whatsapp"></i>
+                    <a href="https://vercel.com/kumarsrinivas945-4903s-projects" target="_blank" class="vercel-icon">
+                        <i class="bi bi-triangle-fill"></i>
                     </a>
-                    <a href="https://www.instagram.com/__mr__sreenu__" target="_blank">
+                    <!-- <a href="https://www.instagram.com/__mr__sreenu__" target="_blank">
                         <i class="bi bi-instagram"></i>
-                    </a>
+                    </a> -->
                     <a href="mailto:kumarsrinivas945@gmail.com">
                         <i class="bi bi-envelope-arrow-up-fill"></i>
                     </a>
                 </span>
-                <span class="hero-section1-btns">
-                    <button class="btn-design contact-btn">Contact Me <i class="bi bi-person-lines-fill"
-                            style="background-color: transparent;"></i></button>
-                    <button class="btn-design resume-btn">Resume <i class="bi bi-download"></i></button>
-                </span>
+                <div class="hero-section1-btns">
+                    <a href="#contact" class="btn-design contact-btn">
+                        Contact Me <i class="bi bi-person-lines-fill" style="background-color: transparent;"></i>
+                    </a>
+                    <a href="./pdf/Srinivas_Rao_Web_Developer_Resume.pdf" target="_blank" class="btn-design resume-btn">
+                        Resume <i class="bi bi-download"></i>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="hero-section2">
-            <img src="./images/sreenu-no-bg.png" alt="">
+            <img src="./images/srinivas-corporate-pic-removebg-preview.png" alt="Srinivas-Rao-Image" class="srinivas-dp">
         </div>
     </div>
 
@@ -99,7 +114,8 @@
             </p>
 
             <div class="about-status">
-                <span class="about-card">
+
+                <a href="#work" class="about-card">
                     <div class="experience">
                         <i class="bi bi-briefcase"></i>
                         <p>EXPERIENCE</p>
@@ -108,9 +124,9 @@
                         <p>2</p>
                         <p>YRS</p>
                     </div>
-                </span>
+                </a>
 
-                <span class="about-card">
+                <a href="#projects" class="about-card">
                     <div class="experience">
                         <i class="bi bi-briefcase"></i>
                         <p>PROJECTS</p>
@@ -119,9 +135,9 @@
                         <p>10+</p>
                         <p>samples</p>
                     </div>
-                </span>
+                </a>
 
-                <span class="about-card">
+                <a href="#projects" class="about-card">
                     <div class="experience">
                         <i class="bi bi-briefcase"></i>
                         <p>CLEAN CODE</p>
@@ -130,18 +146,18 @@
                         <p>100%</p>
                         <p>LINTED</p>
                     </div>
-                </span>
+                </a>
+
             </div>
 
         </div>
 
-        <h1 class="about-text rbrace1" style="text-align: left;">&rbrace;</h1>
 
     </div>
 
     <!-- SKILLS SECTION -->
     <div class="skills-section" id="skills">
-        <h1 class="skills-text">Skills &lbrace;</h1>
+        <h1 class="skills-text">SKILLS &lbrace;</h1>
 
 
         <div class="skills-part1">
@@ -158,8 +174,8 @@
                 <p class="skill-name">JS</p>
             </span>
             <span class="skill-card">
-                <img src="./images/xml.png" alt="" class="skill-icon">
-                <p class="skill-name">XML</p>
+                <img src="./images/bootstarp.png" alt="" class="skill-icon">
+                <p class="skill-name">BOOTSTRAP</p>
             </span>
             <span class="skill-card">
                 <img src="./images/reactJS.png" alt="" class="skill-icon">
@@ -173,30 +189,37 @@
 
         <div class="skills-part2">
             <span class="skill-card">
-                <img src="./images/android.png" alt="" class="skill-icon">
-                <p class="skill-name">ANDROID</p>
+                <img src="./images/expressJS.png" alt="" class="skill-icon">
+                <p class="skill-name">EXPRESS JS</p>
+            </span>
+            <span class="skill-card">
+                <img src="./images/xml.png" alt="" class="skill-icon">
+                <p class="skill-name">XML</p>
             </span>
             <span class="skill-card">
                 <img src="./images/kotlin.png" alt="" class="skill-icon">
                 <p class="skill-name">KOTLIN</p>
             </span>
             <span class="skill-card">
-                <img src="./images/expressJS.png" alt="" class="skill-icon">
-                <p class="skill-name">EXPRESS JS</p>
-            </span>
-            <span class="skill-card">
                 <img src="./images/mongoDB.png" alt="" class="skill-icon">
                 <p class="skill-name">MONGO DB</p>
             </span>
             <span class="skill-card">
-                <img src="./images/bootstarp.png" alt="" class="skill-icon">
-                <p class="skill-name">BOOTSTRAP</p>
+                <img src="./images/android.png" alt="" class="skill-icon">
+                <p class="skill-name">ANDROID</p>
             </span>
             <span class="skill-card">
                 <img src="./images/git.png" alt="" class="skill-icon">
                 <p class="skill-name">GIT</p>
             </span>
         </div>
+
+        <!-- <div class="skills-part2">
+            <span class="skill-card">
+                <img src="./images/expressJS.png" alt="" class="skill-icon">
+                <p class="skill-name">API  INTEGRATIONN</p>
+            </span>
+        </div> -->
 
         <h1 class="skills-text">&rbrace;</h1>
     </div>
@@ -215,11 +238,11 @@
                 <h1 class="job-text">Android Developer</h1>
             </div>
             <div class="dot dot1"><i class="bi bi-dot"></i>
-                <h1 class="job-text">Mern Stack Developer</h1>
+                <h1 class="job-text">Mern Stack Intern</h1>
             </div>
-            <div class="dot dot3"><i class="bi bi-dot"></i>
-                <h1 class="job-text">Freelancer Work</h1>
-            </div>
+            <!-- <div class="dot dot3"><i class="bi bi-dot"></i>
+                <h1 class="job-text">k</h1>
+            </div> -->
             <p class="year-text">2024</p>
         </div>
         <h1 class="work-text">&rbrace;</h1>
@@ -285,7 +308,6 @@
                 </form>
             </div>
         </div>
-        <h1 class="skills-text brace4">&rbrace;</h1>
     </div>
 
 
@@ -300,13 +322,27 @@
             </div>
 
             <div class="footer-section2">
-                <a href=""><h3>NAVIGATION</h3></a>
-                <a href="#home"><p>Home</p></a>
-                <a href="#about"><p>About</p></a>
-                <a href="#skills"><p>Skills</p></a>
-                <a href="#work"><p>Work</p></a>
-                <a href="#projects"><p>Projects</p></a>
-                <a href="#contact"><p>Contact</p></a>
+                <a href="">
+                    <h3>NAVIGATION</h3>
+                </a>
+                <a href="#home">
+                    <p>Home</p>
+                </a>
+                <a href="#about">
+                    <p>About</p>
+                </a>
+                <a href="#skills">
+                    <p>Skills</p>
+                </a>
+                <a href="#work">
+                    <p>Work</p>
+                </a>
+                <a href="#projects">
+                    <p>Projects</p>
+                </a>
+                <a href="#contact">
+                    <p>Contact</p>
+                </a>
             </div>
 
             <div class="footer-section3">
@@ -319,14 +355,16 @@
                     <p>
                         <a href="https://github.com/Sreenu9133" target="_blank"><i class="bi bi-github"></i></a>
                     </p>
-                    <p> 
-                        <a href="https://www.linkedin.com/in/srinivas-rao-945s" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <p>
+                        <a href="https://www.linkedin.com/in/srinivas-rao-945s" target="_blank"><i
+                                class="bi bi-linkedin"></i></a>
                     </p>
                     <p>
                         <a href="https://wa.me/919133753252" target="_blank"><i class="bi bi-whatsapp"></i></a>
                     </p>
                     <p>
-                        <a href="https://www.instagram.com/__mr__sreenu__" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.instagram.com/__mr__sreenu__" target="_blank"><i
+                                class="bi bi-instagram"></i></a>
                     </p>
                 </span>
             </div>
@@ -340,9 +378,6 @@
         </div>
 
     </footer>
-
-
-
 
     <script src="./function.js"></script>
 </body>
