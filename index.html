@@ -84,7 +84,8 @@
             </div>
         </div>
         <div class="hero-section2">
-            <img src="./images/srinivas-corporate-pic-removebg-preview.png" alt="Srinivas-Rao-Image" class="srinivas-dp">
+            <img src="./images/Srinivas-picture-removebg-preview.png" alt="Srinivas-Rao-Image"
+                class="srinivas-dp">
         </div>
     </div>
 
@@ -137,7 +138,7 @@
                     </div>
                 </a>
 
-                <a href="#projects" class="about-card">
+                <!-- <a href="#projects" class="about-card">
                     <div class="experience">
                         <i class="bi bi-briefcase"></i>
                         <p>CLEAN CODE</p>
@@ -146,7 +147,7 @@
                         <p>100%</p>
                         <p>LINTED</p>
                     </div>
-                </a>
+                </a> -->
 
             </div>
 
@@ -271,44 +272,90 @@
 
 
     <!-- CONTACT SECTION -->
-    <div class="contact-section" id="contact">
-        <div class="contact-left-part">
-            <h1 class="skills-text contact">Contact &lbrace;</h1>
-            <h3 class="have-project-text">Have a project in mind?</h3>
-            <p class="inbox-text">My inbox is always open for new opportunities.</p>
+   <div class="contact-section" id="contact">
+    <div class="contact-left-part">
+        <h1 class="skills-text contact">Contact &lbrace;</h1>
 
-            <div class="contact-links">
-                <a href=""><span class="contact-links-text"><i class="bi bi-github"></i> Sreenu9133</span></a>
-                <a href=""><span class="contact-links-text"><i class="bi bi-envelope-arrow-up-fill"></i>
-                        kumarsrinivas945@gmail.com</span></a>
-                <a href=""><span class="contact-links-text"><i class="bi bi-linkedin"></i> Srinivas Rao</span></a>
-            </div>
+        <h3 class="have-project-text">Have a project in mind?</h3>
 
-            <h1 class="skills-text brace3">&rbrace;</h1>
+        <p class="inbox-text">
+            My inbox is always open for new opportunities.
+        </p>
+
+        <div class="contact-links">
+            <a href="https://github.com/Sreenu9133">
+                <span class="contact-links-text">
+                    <i class="bi bi-github"></i> Sreenu9133
+                </span>
+            </a>
+
+            <a href="mailto:kumarsrinivas945@gmail.com">
+                <span class="contact-links-text">
+                    <i class="bi bi-envelope-arrow-up-fill"></i>
+                    kumarsrinivas945@gmail.com
+                </span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/srinivas-rao-945s">
+                <span class="contact-links-text">
+                    <i class="bi bi-linkedin"></i> Srinivas Rao
+                </span>
+            </a>
         </div>
-        <div class="contact-right-part">
-            <div class="form-section">
-                <form>
-                    <span class="form-fields email">
-                        <label for="">Email</label>
-                        <input type="email">
-                    </span>
 
-                    <span class="form-fields subject">
-                        <label for="">Subject</label>
-                        <input type="text">
-                    </span>
+        <h1 class="skills-text brace3">&rbrace;</h1>
+    </div>
 
-                    <span class="form-fields message">
-                        <label for="">Message</label>
-                        <input type="text">
-                    </span>
+    <div class="contact-right-part">
+        <div class="form-section">
 
-                    <button type="submit" class="btn-design1">Submit</button>
-                </form>
-            </div>
+            <form id="contact-form">
+
+    <span class="form-fields email">
+        <label for="from_email">Email</label>
+        <input
+            type="email"
+            id="from_email"
+            name="from_email"
+            required
+        >
+    </span>
+
+    <span class="form-fields subject">
+        <label for="subject">Subject</label>
+        <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+        >
+    </span>
+
+    <span class="form-fields message">
+        <label for="message">Message</label>
+        <input
+            type="text"
+            id="message"
+            name="message"
+            required
+        >
+    </span>
+
+    <button
+        type="submit"
+        class="btn-design1"
+        id="submit-btn">
+        Submit
+    </button>
+
+</form>
+
+<!-- form ke BAHAR -->
+<div id="form-status"></div>
+
         </div>
     </div>
+</div>
 
 
     <!-- FOOTER -->
@@ -363,8 +410,9 @@
                         <a href="https://wa.me/919133753252" target="_blank"><i class="bi bi-whatsapp"></i></a>
                     </p>
                     <p>
-                        <a href="https://www.instagram.com/__mr__sreenu__" target="_blank"><i
-                                class="bi bi-instagram"></i></a>
+                        <a href="https://vercel.com/kumarsrinivas945-4903s-projects" target="_blank">
+                            <i class="bi bi-caret-up-square"></i>
+                        </a>
                     </p>
                 </span>
             </div>
@@ -379,6 +427,8 @@
 
     </footer>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script src="./function.js"></script>
 </body>
 

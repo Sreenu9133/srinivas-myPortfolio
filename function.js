@@ -275,3 +275,74 @@ const contactObserver = new IntersectionObserver((entries) => {
 
 const contactSection = document.querySelector('.contact-section');
 contactObserver.observe(contactSection);
+
+
+
+
+
+(function () {
+    emailjs.init({
+        publicKey: "rfaeHGLsJdHgnoQV7",
+    });
+})();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const contactForm = document.getElementById("contact-form");
+    const submitBtn = document.getElementById("submit-btn");
+    const formStatus = document.getElementById("form-status");
+
+    if (!contactForm) return;
+
+    contactForm.addEventListener("submit", function (event) {
+
+        // VERY IMPORTANT
+        event.preventDefault();
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+
+        emailjs.sendForm(
+            "service_k1jmwkt",
+            "template_wlwutyt",
+            contactForm
+        )
+        .then(() => {
+
+            formStatus.textContent =
+                "Your message has been sent successfully.";
+
+            formStatus.style.background = "#111";
+            formStatus.classList.add("show");
+
+            contactForm.reset();
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit";
+
+            setTimeout(() => {
+                formStatus.classList.remove("show");
+            }, 4000);
+
+        })
+        .catch((error) => {
+
+            console.error("EmailJS Error:", error);
+
+            formStatus.textContent =
+                "Unable to send your message. Please try again.";
+
+            formStatus.style.background = "#b91c1c";
+            formStatus.classList.add("show");
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit";
+
+            setTimeout(() => {
+                formStatus.classList.remove("show");
+            }, 4000);
+        });
+    });
+
+});
